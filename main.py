@@ -1,4 +1,10 @@
-url = "bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar"
+#url = "bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar"
+url = " "
+url = url.strip()  # Aqui eu está sendo tirado os espaços vazios
+
+if url == "":
+    raise ValueError("A URL esta vazia")   #Aqui está sendo alertado sobre o erro
+
 
 # Separa base e parâmetros
 indice_interrogacao = url.find('?')
